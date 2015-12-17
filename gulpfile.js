@@ -6,6 +6,7 @@ var minifyCSS = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var requirejs = require('gulp-requirejs');
 
 gulp.task('less', function () {
   gulp.src('less/*.less')
@@ -24,14 +25,20 @@ gulp.task('less', function () {
 });
 
 gulp.task('html', function () {
-  gulp.src('*.html')
+  gulp.src(['*.html', 'tplparts/*.html'])
     .pipe(connect.reload());
 });
 
 gulp.task('js', function () {
-  gulp.src('js/*.js')
+  requirejs({
+    baseUrl: 'js',
+    name: '../bower_components/almond/almond',
+    include: ['main'],
+    insertRequire: ['main'],
+    out: 'common.js',
+    wrap: true
+  })
     .pipe(uglify())
-    .pipe(concat('common.js'))
     .pipe(rename({
       suffix: '.min'
     }))

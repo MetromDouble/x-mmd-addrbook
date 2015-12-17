@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Джон",
+    "lastname": "Малкович",
+    "position": "Актер",
+    "company": "Пепси Ко",
+    "phone": "+79994566456",
+    "email": "jmalk@gmail.com"
+  },
+  {
+    "name": "Джек",
+    "lastname": "Изенхард",
+    "position": "Администратор",
+    "company": "Media Group",
+    "phone": "+79117770056",
+    "email": "isenhard@gmail.com"
+  },
+  {
+    "name": "Мила",
+    "lastname": "Кунис",
+    "position": "Актриса",
+    "company": "Local Industries",
+    "phone": "+79456456456",
+    "email": "omgloveher@gmail.com"
+  },
+  {
+    "name": "Иван",
+    "lastname": "Волычаров",
+    "position": "Доктор",
+    "company": "Клиника доктора Айболита",
+    "phone": "+79456456456",
+    "email": "wolpher@gmail.com"
+  },
+  {
+    "name": "Яков",
+    "lastname": "Перемал",
+    "position": "Баллистик",
+    "company": "DARPA Co.",
+    "phone": "+79456456456",
+    "email": "wowitsburn@gmail.com"
+  }
+]

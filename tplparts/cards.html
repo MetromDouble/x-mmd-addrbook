@@ -1,0 +1,14 @@
+<h1>Контакты</h1>
+<div class="contacts">
+  <div ng-repeat="contact in contacts | filter:query | orderBy:orderProp">
+    <div class="userpic"><img src="" alt="" /></div>
+    <div class="userdata">
+      {{contact.name}} {{contact.lastname}}
+      <div>{{contact.position}} ({{contact.company}})</div>
+    </div>
+    <div class="phone-mail">
+      {{contact.email}}
+      <div>{{contact.phone}}</div>
+    </div>
+  </div>
+</div>

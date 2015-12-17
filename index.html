@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" ng-app="xMmdAddrbook">
 <head>
   <meta charset="UTF-8">
   <title>x-mmd-addrbook</title>
   <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
   <link rel="stylesheet" href="dist/css/common.min.css">
-  <script src="bower_components/jquery/jquery.min.js" type=text/javascript></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300">
+  <script src="bower_components/jquery/dist/jquery.min.js" type=text/javascript></script>
+  <script src="bower_components/angular/angular.min.js" type=text/javascript></script>
+  <script src="bower_components/angular-route/angular-route.min.js" type=text/javascript></script>
   <script src="dist/js/common.min.js" type=text/javascript></script>
 </head>
 <body>
-  
+<div class="wrapper">
+
+  <div ng-view></div>
+
+  <aside>
+    <div class="aside-cap">Поиск</div>
+    <input type="text" name="search" value="" ng-model="query">
+    <a href="#/">Фильтр</a>
+    <div class="aside-cap">Сортировка</div>
+    <select name="sort" id="sort" ng-model="orderProp">
+      <option value="name">Имя</option>
+      <option value="lastname">Фамилия</option>
+      <option value="position">Должность</option>
+      <option value="company">Компания</option>
+    </select>
+    <button>Добавить контакт</button>
+  </aside>
+</div>
+
 </body>
 </html>
