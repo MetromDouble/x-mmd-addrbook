@@ -21,7 +21,7 @@ h1 {
   color: @cAccent;
   font-weight: 300;
   font-size: 48px;
-  margin: 60px 0 80px 0;
+  margin: 40px 0 60px 0;
 }
 
 a {
@@ -91,8 +91,7 @@ aside {
   right: ~'calc(100% / 2 - 500px)';
   top: 168px;
   color: @cGray2;
-  font-size: 24px;
-  input, select, button {
+  input, select {
     position: relative;
     appearance: none !important;
     box-sizing: border-box;
@@ -102,6 +101,9 @@ aside {
     width: 94%;
     padding: 0 6%;
     font-size: 16px;
+  }
+  .btn {
+    width: 94%;
   }
   a {
     display: block;
@@ -122,5 +124,40 @@ aside {
 }
 
 .aside-cap {
-  margin-top: 20px;
+  margin-top: 10px;
+  color: @cGray2;
+  font-size: 24px;
+}
+
+.add-new {
+  position: relative;
+  width: 660px;
+  div {font-size: 18px;}
+  input {
+    width: 96%;
+    height: 36px;
+    appearance: none !important;
+    border: none;
+    background: @cGray3;
+    padding: 4px 2%;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+.btn {
+  display: block;
+  height: 48px !important;
+  padding: 12px 0;
+  text-align: center;
+  background: @cAccent !important;
+  color: @cBackground;
+  margin: 20px 0;
+  font-size: 16px;
+  appearance: none !important;
+  box-sizing: border-box;
+  &:hover {
+    text-decoration: none;
+  }
 }

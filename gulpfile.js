@@ -57,7 +57,7 @@ gulp.task('connect', function () {
 gulp.task('watch', function () {
   gulp.watch('less/*.less', ['less']);
   gulp.watch('js/*.js', ['js']);
-  gulp.watch('*.html', ['html']);
+  gulp.watch(['./*.html', './tplparts/*.html'], ['html']);
 })
 
 gulp.task('default', ['less', 'js', 'html', 'connect', 'watch']);

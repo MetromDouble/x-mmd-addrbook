@@ -2,12 +2,12 @@ define([], function () {
 
 var xmabControllers = angular.module('xmabControllers', []);
 
-xmabControllers.controller('PhoneListCtrl', ['$scope', '$http',
-  function ($scope, $http) {
+xmabControllers.controller('PhoneListCtrl', ['$scope','$rootScope', '$http',
+  function ($scope, $rootScope, $http) {
     $http.get('people.json').success(function(data) {
       $scope.contacts = data;
     });
-    $scope.orderProp = 'name';
+    $rootScope.orderProp = 'name';
   }]);
 
 });
