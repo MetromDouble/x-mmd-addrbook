@@ -1,18 +1,18 @@
 <h1>Добавить контакт</h1>
-<form action="#/" class="add-new">
+<form action="#/" class="add-new" ng-submit="addNew()">
   <div class="aside-cap">Имя</div>
-  <input type="text" required>
+  <input type="text" required  ng-model="newContact.name">
   <div class="aside-cap">Фамилия</div>
-  <input type="text" required>
+  <input type="text" required  ng-model="newContact.lastname">
   <div class="aside-cap">Должность</div>
-  <input type="text">
+  <input type="text"  ng-model="newContact.position">
   <div class="aside-cap">Компания</div>
-  <input type="text">
+  <input type="text"  ng-model="newContact.company">
   <div class="aside-cap">Телефон</div>
-  <input type="tel" required>
+  <input type="tel" required  ng-model="newContact.phone">
   <div class="aside-cap">Email</div>
-  <input type="email" required>
+  <input type="email" required  ng-model="newContact.email">
   <div class="aside-cap">Ссылка на изображение</div>
-  <input type="url">
+  <input type="url"  ng-model="newContact.img_url">
   <input type="submit" class="btn" value="OK">
 </form>

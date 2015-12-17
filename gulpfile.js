@@ -36,9 +36,13 @@ gulp.task('js', function () {
     include: ['main'],
     insertRequire: ['main'],
     out: 'common.js',
-    wrap: true
+    wrap: false
   })
-    .pipe(uglify())
+    /*.pipe(uglify({
+      options: {
+        mangle: false
+      }
+    }))*/
     .pipe(rename({
       suffix: '.min'
     }))

@@ -1,8 +1,6 @@
-define(['controllers'], function() {
+define(['controllers', 'services'], function() {});
 
-'use strict';
-
-var xMmdAddrbook = angular.module('xMmdAddrbook', ['ngRoute', 'xmabControllers']);
+var xMmdAddrbook = angular.module('xMmdAddrbook', ['ngRoute', 'xmabControllers', 'xmabServices']);
 xMmdAddrbook.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
@@ -22,5 +20,3 @@ xMmdAddrbook.config(['$routeProvider',
         redirectTo: '/'
       });
   }]);
-
-});
