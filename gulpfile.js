@@ -38,11 +38,11 @@ gulp.task('js', function () {
     out: 'common.js',
     wrap: false
   })
-    /*.pipe(uglify({
+    .pipe(uglify({
       options: {
         mangle: false
       }
-    }))*/
+    }))
     .pipe(rename({
       suffix: '.min'
     }))

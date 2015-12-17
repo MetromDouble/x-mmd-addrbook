@@ -4,12 +4,13 @@ xmabServices.factory('contactSync', ['$http', function($http) {
   return {
     refresh: function (scope) {
       $http.post('sync.php').success(function(response) {
-        scope.contacts = response;
+        if(response != "null") {
+          scope.contacts = response};
       });
     },
     addContact: function (scope, data) {
       $http.post('sync.php', data).success(function(response) {
-        scope.contacts = response;
+        if(response != "null") {scope.contacts = response};
       });
     },
     deleteContact: function (scope, data) {
@@ -18,7 +19,7 @@ xmabServices.factory('contactSync', ['$http', function($http) {
         id_user: data
       };
       $http.post('sync.php', tmp).success(function(response) {
-        scope.contacts = response;
+        if(response != "null") {scope.contacts = response};
       });
     }
   };
