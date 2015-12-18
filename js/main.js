@@ -5,15 +5,15 @@ xMmdAddrbook.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: '/tplparts/cards.html',
+        templateUrl: 'tplparts/cards.html',
         controller: 'PhoneListCtrl'
       }).
       when('/add-contact', {
-        templateUrl: '/tplparts/addcontact.html',
+        templateUrl: 'tplparts/addcontact.html',
         controller: 'PhoneListCtrl'
       }).
       when('/table-view', {
-        templateUrl: '/tplparts/table.html',
+        templateUrl: 'tplparts/table.html',
         controller: 'PhoneListCtrl'
       }).
       otherwise({
